@@ -1,0 +1,12 @@
+.metadata/*
+InFlight/.settings/*
+*.apk
+*.ap_
+*.dex
+*.class
+InFlight/bin/
+InFlight/gen/
+InFlight/local.properties
+InFlight/.classpath
+InFlight/.project
+InFlight/proguard/
