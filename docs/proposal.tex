@@ -15,7 +15,9 @@ Fundamentally, this application will allow pilots to access their maps more quic
 
 Our working name for this application is InFlight, encapsulating the use of the application for pilots and the kind of information it provides.
 \section{Plan}
-We want to create a fast, reliable, and intuitive application that allows pilots to access maps and plan flights quickly and intuitively. We intend to design and develop the application, as well as architect an evaluation plan for the project that will help us determine the success of our team.
+We want to create a fast, reliable, and intuitive application that allows pilots to access maps and plan flights quickly and intuitively. We intend to design and develop the application, as well as architect an evaluation plan for the project that will help us determine the success of our team. We can use existing software infrastructure for flight planning and mapping applications, providing much of the back end for our application. On top of this core, we plan to develop an easy-to-use user interface that allows users to easily access their maps and flight plans. 
+
+In this document, we have laid out the implementation plans in the Implementation subsection of Methodology. In addition, we discuss our evaluation crtieria in the Evaluation section of the proposal. We intend to publish our results from this evaluation in a final report and presentation, as well as provide a final overview of the project and how we met our starting goals.
 \section{Benefits}
 Pilots are constantly fighting with their maps. Imagine yourself in a light aircraft cockpit - it's about 50\% narrower than a car - with another person just millimeters from your right elbow. In addition, the yoke, the way the airplane is controlled, is just inches from your chest, and you can't touch it without altering the airplanes direction. Amongst all of this, think about an aviation map. The standard "sectional" (regional aviation map) is nearly 3 feet square, and needs to be entirely unfolded and examined to find the location you're looking for. Throw in radio communication, and one has a recipe for at least confusion, and at most disaster. 
 
@@ -27,7 +29,7 @@ We plan to provide an inexpensive alternative application (~10-20\$/year) that h
 
 These factors allow us to make pilots safer by providing easier access to current maps and charts. It also will allow users to keep track of their planned flights both in-flight and on the ground, improving aircraft navigation.
 
-For our own team, we percieve several other benefits, namely
+For our own team, we perceive several other benefits, namely
 \begin{itemize}
 \item Learning uses of the Android SDK
 \item Learning use of mobile geographic information systems
@@ -40,7 +42,9 @@ We intend to use the Android SDK as our primary development environment. This is
 The core of our application is the Federal Aviation Administration's publicly available datasets. These include comprehensive charts of all kinds, as well as safe-for-navigation data that allows us to provide up-to-date data quickly. As a safety critical application, this is essential to use of our software.
 
 \section{Evaluation}
-We intend to use a combination of use testing by several active pilots, as well as ground usability testing to evaluate application performance. 
+We intend to use two methods to evaluate our application. The first is traditional user testing, presenting users with the application and asking them to preform a common task. We intend to score this metric based on the amount of time required for the user to find the requested function of the application.
+
+Our second method is centered around pilots. We have access to several instructor pilots with experience using more traditional EFBs and other competitor applications, and can provide actual use cases in real aircraft. We intend this to be the final use case testing, providing a mechanism to find usability issues unique to the airborne environment.
 
 \section{Qualifications}
 \begin{itemize}
@@ -50,6 +54,7 @@ We intend to use a combination of use testing by several active pilots, as well 
 \item Junior computer science major
 \item Experience with aviation GIS in web applications
 \item Multiple internships (Wolfram Research, 2010; Institute for Software Research, 2012, 2013)
+\end{itemize}
 \end{itemize}
 
 \end{document}
