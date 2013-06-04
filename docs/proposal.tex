@@ -7,18 +7,6 @@
 \title{Project Proposal}
 \begin{document}
 \section{Introduction}
-For a long time, pilots have struggled with maps. The problem comes with the territory - maps are big, and cockpits are small. The obvious solution lies in applications like Google Maps, where one can smoothly browse through the maps at will. Application developers have responded to this requirement, making things called \emph{electronic flight bags}, which can contain all of the charts and maps that a pilot needs. 
-
-However, these come at a substantial price. A commercial EFB might cost in upwards of two thousand dollars, and EFBs using existing hardware (such as iPads and Android tablets) are little better once the cost of the tablet is factored in. We want to fix this by providing a free alternative application for Android that has all of the functionality but none of the costs.
-
-Fundamentally, this application will allow pilots to access their maps more quickly and easily, especially when compared to paper charts. On top of this foundation, we will also provide what is known as \emph{flight planning} functionality, where a pilot enters his desired route into the device and it plots it on the map. The information for this view is given by industry standard data sources and methods, allowing safe-for-flight information to be displayed.
-
-Our working name for this application is InFlight, encapsulating the use of the application for pilots and the kind of information it provides.
-\section{Plan}
-We want to create a fast, reliable, and intuitive application that allows pilots to access maps and plan flights quickly and intuitively. We intend to design and develop the application, as well as architect an evaluation plan for the project that will help us determine the success of our team. We can use existing software infrastructure for flight planning and mapping applications, providing much of the back end for our application. On top of this core, we plan to develop an easy-to-use user interface that allows users to easily access their maps and flight plans. 
-
-In this document, we have laid out the implementation plans in the Implementation subsection of Methodology. In addition, we discuss our evaluation crtieria in the Evaluation section of the proposal. We intend to publish our results from this evaluation in a final report and presentation, as well as provide a final overview of the project and how we met our starting goals.
-\section{Benefits}
 Pilots are constantly fighting with their maps. Imagine yourself in a light aircraft cockpit - it's about 50\% narrower than a car - with another person just millimeters from your right elbow. In addition, the yoke, the way the airplane is controlled, is just inches from your chest, and you can't touch it without altering the airplanes direction. Amongst all of this, think about an aviation map. The standard "sectional" (regional aviation map) is nearly 3 feet square, and needs to be entirely unfolded and examined to find the location you're looking for. Throw in radio communication, and one has a recipe for at least confusion, and at most disaster. 
 
 In recent years, devices known as "Electronic Flight Bags" have become popular. The first devices were custom-made tablets with FAA certifications that provided everything and the metaphorical kitchen sink. This functionality came at very large cost, however, with prices reaching into the low thousands for the device alone, never mind the mandatory support.
@@ -27,7 +15,19 @@ Then, into this world of overpriced EFBs came the iPad and Android tablets. Thes
 
 We plan to provide an inexpensive alternative application (~10-20\$/year) that has near feature parity and similar performance to the "big name" applications. This, in conjunction with deployment onto Android devices, generally cheaper than the iPad, will allow more pilots to use the application.
 
-These factors allow us to make pilots safer by providing easier access to current maps and charts. It also will allow users to keep track of their planned flights both in-flight and on the ground, improving aircraft navigation.
+Fundamentally, this application will allow pilots to access their maps more quickly and easily, especially when compared to paper charts. On top of this foundation, we will also provide what is known as \emph{flight planning} functionality, where a pilot enters his desired route into the device and it plots it on the map. The information for this view is given by industry standard data sources and methods, allowing safe-for-flight information to be displayed.
+
+Our working name for this application is InFlight, encapsulating the use of the application for pilots and the kind of information it provides.
+\section{Plan}
+We want to create a fast, reliable, and intuitive application that allows pilots to access maps and plan flights quickly and intuitively. We intend to design and develop the application, as well as architect an evaluation plan for the project that will help us determine the success of our team. We can use existing software infrastructure for flight planning and mapping applications, providing much of the back end for our application. On top of this core, we plan to develop an easy-to-use user interface that allows users to easily access their maps and flight plans. 
+
+In this document, we have laid out the implementation plans in the Implementation subsection of Methodology. In addition, we discuss our evaluation crtieria in the Evaluation section of the proposal. We intend to publish our results from this evaluation in a final report and presentation, as well as provide a final overview of the project and how we met our starting goals.
+
+We intend to organize this project using several industry-standard utilities. Overall organization will be achieved through the Redmine project management platform. In addition, we will manage our source via the Git source control system, improving code coordination between group members. 
+
+We discuss our schedule in the "Project Schedule" section of the Approach. We will be meeting frequently to coordinate our actions, followed by free time to implement assigned tasks independently.
+\section{Benefits}
+The primary beneficiaries of our work will be the pilots using our software in their aircraft. Our application is intended to provide the same functionality as more expensive and complicated applications at a small fraction of the price.
 
 For our own team, we perceive several other benefits, namely
 \begin{itemize}
