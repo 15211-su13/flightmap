@@ -10,3 +10,12 @@ InFlight/local.properties
 InFlight/.classpath
 InFlight/.project
 InFlight/proguard/
+*.aux
+*.bbl
+*.blg
+*.log
+*.pdf
+*.gz
+*.classpath
+*.project
+google-play-services_lib
