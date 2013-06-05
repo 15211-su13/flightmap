@@ -15,6 +15,8 @@ public class MainMap extends MapFragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
+	    
 	    GoogleMap map = getMap();
+	    
 	}
 }

@@ -1,11 +1,20 @@
-\documentclass[10pt,a4paper]{report}
+\documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
-\usepackage{amssymb}
-\author{Benjamin}
+\usepackage{amssymb, graphicx}
+\author{Benjamin Chung, Tianyuan Ding, Felix Wen}
 \title{Project Proposal}
+\makeindex
 \begin{document}
+\maketitle
+\section*{Abstract}
+We propose a new application, designed to solve a longstanding problem among pilots: maps. Existing paper maps are hard to hold, and other apps are expensive. Our app will be easy to hold and cheap, while providing the same functionality as the bigger applications.
+
+This application has two primary components: The map and the plan. The map allows pilots to see where they are and where they are going, and the plan view allows users to determine the route that they want to take.
+
+This proposal outlines the technologies, team, and time-lines what we intend to use to complete this project, as well as additional detail about the function of the application.
+\tableofcontents
 \section{Introduction}
 Pilots are constantly fighting with their maps. Imagine yourself in a light aircraft cockpit - it's about 50\% narrower than a car - with another person just millimeters from your right elbow. In addition, the yoke, the way the airplane is controlled, is just inches from your chest, and you can't touch it without altering the airplanes direction. Amongst all of this, think about an aviation map. The standard "sectional" (regional aviation map) is nearly 3 feet square, and needs to be entirely unfolded and examined to find the location you're looking for. Throw in radio communication, and one has a recipe for at least confusion, and at most disaster. 
 
@@ -40,7 +49,27 @@ For our own team, we perceive several other benefits, namely
 We intend to use the Android SDK as our primary development environment. This is (for obvious reasons) the industry standard mechanism for creating and maintaining Android applications. By necessity, then, we will be developing in Java 7 running on this platform. 
 
 The core of our application is the Federal Aviation Administration's publicly available datasets. These include comprehensive charts of all kinds, as well as safe-for-navigation data that allows us to provide up-to-date data quickly. As a safety critical application, this is essential to use of our software.
+\subsection{Methodology}
+InFlight uses a traditional frontend/backend execution model. The frontend lets the user be in one of three screens: map and plan. 
+\begin{itemize}
+\item \textbf{Map}: The Map mode displays the map of a certain area, as well as showing his or her current location. In addition, the map allows the user to find specific named points using a search box at the top of the screen.
 
+The foundation of the map view is the Google Maps for Android API. This allows us to smoothly display the maps in a way that is highly familliar to the user, and also allows us to shorten the development cycle of the application.
+\item \textbf{Plan}: The plan mode is centered around a "flight plan." For pilots, a flight plan is a string (of the form "KAPA APA DEN KDEN") that lists the points that he wants to fly over. We will provide a table which lists all the waypoints on the route and also provides information such as latitude and longitude for each point. For instance, the route above will be parsed into four points and displayed as a table. 
+
+In addition, Plan interoperates with the Map view. A plan selected in the Plan view will be drawn on the Map, allowing the pilot to easily visualize his route.
+\end{itemize}
+The backend of the software is based around two systems.
+\begin{itemize}
+\item \textbf{Map}: The map backend is primarily preprocessed, using commercially available software to combine FAA provided maps together. These maps reside primarily on a central server, and can be downloaded on demand.
+\item \text{Plan}: The plan backend resides on the client device, and is primarily made up of a SQL database, as well as a standard recursive-descent parser. The parser evaluates the plan strings, and the database provides the data that allows the application to parse them into waypoints.
+\end{itemize}
+\subsection{Project Schedule}
+The project schedule is best demonstrated in figure 1. This depicts our anticipated scheduling for various tasks, both for presentations as well as development activities.
+\begin{figure}
+\includegraphics[scale=.4]{gantt}
+\caption{Project Timeline Gantt Chart}
+\end{figure}
 \section{Evaluation}
 We intend to use two methods to evaluate our application. The first is traditional user testing, presenting users with the application and asking them to preform a common task. We intend to score this metric based on the amount of time required for the user to find the requested function of the application.
 

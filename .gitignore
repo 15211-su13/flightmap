@@ -13,4 +13,6 @@ InFlight/local.properties
 *.log
 *.pdf
 *.gz
+*.idx
+*.toc
 google-play-services_lib
