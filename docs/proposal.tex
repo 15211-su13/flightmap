@@ -3,12 +3,13 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb, graphicx}
+\usepackage{indentfirst}
 \author{Benjamin Chung\\ Tianyuan Ding\\ Felix Wen}
 \title{\textbf{InFlight: Innovating Flight}}
 \makeindex
 \begin{document}
 \maketitle
-\emph{\\\\\\\\\\\\\\}
+\pagenumbering{gobble}
 \section*{Abstract}
 We propose a new mobile device application, designed to solve a longstanding problem among pilots: reading maps. Existing paper maps are hard to hold, and other big apps such as Naviator and ForeFlight are expensive. Our app will be cheap and easy to hold, while providing the same functionality as the bigger applications.
 
@@ -17,8 +18,9 @@ This application has two primary components: The map and the plan. The map allow
 This proposal outlines the technologies that we are using, works distribution, and time-lines what we intend to use to complete this project, as well as additional details about the functions of the application.\newpage
 \tableofcontents
 \newpage
+\pagenumbering{arabic}
 \section{Introduction}
-Pilots are constantly fighting with their maps. Imagine yourself in a light aircraft cockpit - it's about 50\% narrower than a car - with another person just millimeters from your right elbow. In addition, the yoke, the way the airplane is controlled, is just inches from your chest, and you can't touch it without altering the airplanes direction. Amongst all of this, think about an aviation map. The standard ``sectional" (regional aviation map) is nearly 3 feet square, and needs to be entirely unfolded and examined to find the location you're looking for. Throw in radio communication, and one has a recipe for at least confusion, and at most disaster. 
+Pilots are required to use large, complicated maps called sectionals regularly. These maps are extremely large and hard to fold and manipulate, especially within the confines of an aircraft cockpit. When combined with the need for several maps of this kind, sectional maps can be difficult to use within a cockpit.
 
 In recent years, devices known as ``Electronic Flight Bags" have become popular. The first devices were custom-made tablets with FAA certifications that provided everything and the metaphorical kitchen sink. This functionalities came at very large cost, however, with prices reaching into the low thousands for the device alone, never mind the mandatory support.
 
@@ -69,7 +71,7 @@ The backend of the software is based around two systems:
 \end{itemize}
 \subsection{Project Schedule}
 The project schedule is best demonstrated in Figure 1. This schedule depicts our anticipated scheduling for various tasks, both for presentations as well as development activities.
-\begin{figure}
+\begin{figure}[h]
 \includegraphics[scale=.4]{gantt}
 \caption{Project Timeline Gantt Chart}
 \end{figure}
@@ -102,6 +104,10 @@ Our second method is centered around pilots. We have access to several instructo
 \end{itemize}
 
 \section{Sources}
-[1]\texttt{  http://developer.android.com/sdk/index.html      }(2013)$\\$
-[2]\texttt{  http://maps.google.com/      }(2013)
+
+\begin{enumerate}
+\itemsep-1.3em
+\item \texttt{ http://developer.android.com/sdk/index.html     } (2013)$\\ $
+\item \texttt{  http://maps.google.com/      }(2013)
+\end{enumerate} 
 \end{document}
