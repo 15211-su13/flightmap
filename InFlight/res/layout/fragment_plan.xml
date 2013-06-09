@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:hint="@string/enter_flight_hint"
+            android:inputType="textCapCharacters" >
+
+            <requestFocus />
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Search"
+            android:src="@android:drawable/ic_menu_search" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1" >
+
+        <TableLayout
+            android:id="@+id/route"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                <TextView
+		            android:id="@+id/row_name"
+		            android:text="Name"
+		            android:layout_marginRight="10dp"/>
+                <TextView
+		            android:id="@+id/row_hdg"
+		            android:text="Heading"
+		            android:layout_marginRight="10dp"/>
+                <TextView
+		            android:id="@+id/row_dist"
+		            android:text="Distance"
+		            android:layout_marginRight="10dp" />
+            </TableRow>
+        </TableLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

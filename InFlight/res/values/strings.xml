@@ -2,8 +2,13 @@
 <resources>
 
     <string name="app_name">InFlight</string>
+    <string name="menu_map">Map</string>
+    <string name="menu_plan">Plan</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="test_toast">Hello World!</string>
+    
+    
+    <string name="enter_flight_hint">Enter Flight Plan</string>
 
 </resources>
