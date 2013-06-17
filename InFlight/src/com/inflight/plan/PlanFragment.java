@@ -7,8 +7,18 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 public class PlanFragment extends Fragment {
+	
+
+    @Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+	    ListView lv = (ListView) getView().findViewById(R.id.result_list);
+	    lv.setAdapter(new PlanAdapter(this.getActivity().getApplicationContext()));
+    }
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
