@@ -1,5 +1,7 @@
 package com.inflight.plan;
 
+import java.util.ArrayList;
+
 import com.inflight.R;
 
 import android.app.Activity;
@@ -13,23 +15,24 @@ import android.widget.ListAdapter;
 import android.widget.TextView;
 
 public class PlanAdapter implements Adapter, ListAdapter {
-	private String[] backing = new String[] { "hi", "bye" };
+	private ArrayList<PlanPoint> points;
 	private Context context;
 	private LayoutInflater inflater = null;
 	
-	public PlanAdapter(Context context) {
+	public PlanAdapter(Context context, ArrayList<PlanPoint> points) {
 		this.context = context;
+		this.points = points;
 		inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	}
 	
 	@Override
 	public int getCount() {
-		return backing.length;
+		return points.size();
 	}
 
 	@Override
 	public Object getItem(int i) {
-		return backing[i];
+		return points.get(i);
 	}
 
 	@Override
@@ -46,7 +49,10 @@ public class PlanAdapter implements Adapter, ListAdapter {
 	public View getView(int arg0, View convertView, ViewGroup parent) {
 		View view = inflater.inflate(R.layout.simple_list_view, parent, false);
 		
-		((TextView)view.findViewById(R.id.simple_string)).setText(backing[arg0]);
+		((TextView)view.findViewById(R.id.name)).setText(points.get(arg0).getName());
+		((TextView)view.findViewById(R.id.lat)).setText(points.get(arg0).getLoc().latitude + "");
+		((TextView)view.findViewById(R.id.lon)).setText(points.get(arg0).getLoc().longitude + "");
+		
 		return view;
 	}
 
